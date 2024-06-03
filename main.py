@@ -147,6 +147,7 @@ for episode in range(500):
             batch = Transition(*zip(*transitions))
             value_loss, policy_loss = agent.update_params(batch)
     print('Epoch_Return: {}'.format(str(epoch_return.item())))
+    env.shots_to_video()
             
 #%%
 epoch_return
